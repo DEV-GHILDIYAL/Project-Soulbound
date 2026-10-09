@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Soulbound/Scenes/MainMenu.unity
+    guid: cf46d64f47ab4dd899ebe7ba1bba9b5f
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/_Soulbound/Scenes/CombatPrototype.unity
+    guid: b6f2d1ed6bb34cfd9c11d459c0414dbf
+  - enabled: 1
+    path: Assets/_Soulbound/Scenes/ProceduralMazePrototype.unity
+    guid: 233dd81689f348b1b513f316676fd3f6
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

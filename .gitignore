@@ -107,3 +107,31 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /Project Soulbound/[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Local IDE state (shared VS Code settings remain trackable)
+.idea/
+.vscode/.browse.VC.db*
+.vscode/ipch/
+.history/
+*.sln.docstates
+
+# Operating system metadata
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Editor backup files
+*~
+*.swp
+*.swo
+
+# Unity diagnostics and generated capture folder metadata
+/Project Soulbound/[Cc]rashReports/
+/Project Soulbound/[Cc]rashReports.meta
+/Project Soulbound/[Mm]emoryCaptures.meta
+/Project Soulbound/[Rr]ecordings.meta
+
+# Generated build folders outside the nested Unity project
+/[Bb]uild/
+/[Bb]uilds/

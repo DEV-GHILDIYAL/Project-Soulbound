@@ -13,16 +13,21 @@ Combat creates a second problem: every kill needs a safe opportunity to capture 
 - [Game design document](docs/GDD.md): vision, core loop, MVP, puzzle ideas, and replayability.
 - [Mechanics](docs/MECHANICS.md): proposed rules, soul lifecycle, duplication, and tuning.
 - [Roadmap](docs/ROADMAP.md): implementation milestones and playtest criteria.
+- [Development foundation](docs/DEVELOPMENT.md): asset folders, starter components, scene wiring, and remaining work.
 
 The core concept above is confirmed. Additional rules in these documents are **proposals for the first prototype**, not final decisions or implemented features.
 
 ## Current project
 
+Start the game from `Assets/_Soulbound/Scenes/MainMenu.unity`; it is the first build scene. Main/pause/settings/help menus, loading transitions and result-screen return/retry options are documented in [Menu flow](docs/MENU_FLOW.md).
+
+The procedural scene now includes five horror districts, unequal room/hall footprints, narrow passages, hanging remains, obscured-window scares, a flashlight and multi-location key journeys. Read [Horror playtest guide](docs/HORROR_PLAYTEST.md) for current controls, objective chains and verification limits.
+
 - Unity project folder: `Project Soulbound/`.
 - Editor version recorded in the project: **6000.6.4f1**.
 - Universal Render Pipeline, Input System, and AI Navigation are listed in the package manifest.
-- Inspection found `Assets/Scenes/SampleScene.unity` and Unity tutorial/readme scripts; no custom gameplay scripts were found.
-- This documentation pass does not change scenes, scripts, assets, or project settings.
+- Initial inspection found the sample scene and Unity tutorial scripts. Development now includes starter gameplay scripts and 8 placeholder materials under `Assets/_Soulbound/`.
+- Movement, combat/soul, and procedural maze test scenes plus a player prefab are available; see the development guide for controls and current limits.
 
 Open `Project Soulbound/` through Unity Hub using the recorded editor version. Start implementation with the first milestone in the roadmap after resolving the blocking design choices.
 
@@ -35,4 +40,4 @@ Open `Project Soulbound/` through Unity Hub using the recorded editor version. S
 - Collect 3 keys from puzzle-locked chests and open the exit door to win. Solve the associated puzzle before opening each key chest.
 - Still undecided: soul flee speed, capture range, player movement during capture, exact upgrade amounts and attack types, puzzle designs, resource quantities, and controls.
 
-These confirmed choices override earlier prototype suggestions; remaining unconfirmed details are proposals. This update changes documentation only.
+These confirmed choices override earlier prototype suggestions; remaining unconfirmed details are proposals. Starter code is now available; see the development guide for what is wired and what remains.

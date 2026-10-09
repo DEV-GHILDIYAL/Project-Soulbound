@@ -40,7 +40,7 @@ Proposed first playable target: one small maze, one enemy type, one pistol, one 
 | System | Minimum behavior |
 | --- | --- |
 | Player | Movement, first-person camera, limited health/healing, interaction |
-| Maze | Handcrafted corridors with a start, exit, and multiple routes |
+| Maze | Random procedural maze each run; connected corridors, reachable start, exit and 3 chest locations |
 | Pistol | Aim/fire, finite ammunition, clear empty feedback |
 | Enemy | Roam, detect/chase, attack, die; descendants gain aggression |
 | Soul | Spawn on death, flee player, show countdown, 3-second capture hold, duplicate on expiry |
@@ -52,7 +52,7 @@ Proposed first playable target: one small maze, one enemy type, one pistol, one 
 
 Target a short run of roughly 5–10 minutes as an initial playtest hypothesis. Tune from observations.
 
-Defer procedural maze generation, multiple weapons, unrelated enemy variants beyond required descendant attack changes, crafting, permanent upgrades, multiplayer, and extensive story content until the core loop works.
+Procedural maze generation is confirmed MVP scope. Defer multiple weapons, unrelated enemy variants beyond required descendant attack changes, crafting, permanent upgrades, multiplayer, and extensive story content until the core loop works.
 
 ## Puzzle ideas
 
@@ -68,9 +68,9 @@ Use one MVP puzzle. Provide clear feedback when it is solved. Required items mus
 
 ## Replayability
 
-Begin with a fixed maze and vary placements. Keep start and exit safe enough to make runs understandable, and choose objective locations from prevalidated reachable points. Random loot should preserve a minimum useful resource supply.
+Generate a random connected maze each run. Keep the start safe enough to make runs understandable, and place the exit and 3 puzzle-key chests in reachable cells. Save/display a seed for exact layout replay. Random loot should preserve a minimum useful resource supply.
 
-Later, consider seeded layouts, alternate puzzle configurations, difficulty presets, and optional route challenges. Record a seed when randomness is introduced so problematic runs can be reproduced.
+Seeded layouts are part of the current prototype. Later, consider alternate puzzle configurations, difficulty presets, and optional route challenges. Record a seed when randomness is introduced so problematic runs can be reproduced.
 
 ## Open design decisions
 
@@ -106,3 +106,10 @@ These defaults need confirmation through design review and playtesting. Camera a
 - Still undecided: soul flee speed, capture range, player movement during capture, exact upgrade amounts and attack types, puzzle designs, resource quantities, and controls.
 
 These confirmed choices override earlier prototype suggestions; remaining unconfirmed details are proposals. This update changes documentation only.
+
+## Confirmed room progression update
+
+The procedural dungeon is larger (15x15 prototype). Each of the 3 keys lives in a dedicated 8x8-metre chamber, placed away from the start and separated from other key rooms. The room entrance is puzzle-locked; solving the external puzzle opens the room, and its chest gives the key without a second puzzle. Rune logic, linked torches, and coupled rings are the current puzzle prototypes. Base enemies move slowly (1.25 metres/second); descendant upgrades remain. This replaces loose chest placement and separate chest-puzzle locks described earlier.
+
+## Confirmed horror direction and prototype update
+The maze is divided into distinct prison, flooded catacomb, furnace, chapel and astral districts. Unequal room and hall footprints, lower narrow corridors, obscured windows with silhouettes, hanging remains and local sounds support exploration horror. Each key requires a chain of notes, items and distributed world interactions; the complete current chains are recorded in HORROR_PLAYTEST.md. Existing soul capture, duplication, limited resources and three-key exit remain the survival loop.

@@ -54,11 +54,11 @@ Done when: players can explain the soul rule after playing, finish a run through
 
 ## After the MVP
 
-Consider procedural mazes, additional puzzles, enemy types, weapons, soul rewards, story, sound/art production, and persistent progression only after the containment loop is validated. Add one system at a time so its effect on difficulty and replayability can be assessed.
+Procedural mazes are now part of the MVP and have a prototype. Consider additional puzzles, enemy types, weapons, soul rewards, story, sound/art production, and persistent progression after the complete run is validated. Add one system at a time so its effect on difficulty and replayability can be assessed.
 
 ## Immediate next step
 
-Review the open decisions, especially chest puzzle designs, descendant upgrade scaling, and attack patterns. Then begin milestone 1 using placeholder assets. Keep implementation changes separate from this initial documentation pass.
+Playtest ProceduralMazePrototype navigation and layout variation, then wire the 3 puzzle-locked key chests and exit door. Movement, combat and the soul loop have already passed user playtesting in the earlier arena scene. See DEVELOPMENT.md for current implementation scope.
 
 ## Confirmed design update
 
@@ -70,3 +70,6 @@ Review the open decisions, especially chest puzzle designs, descendant upgrade s
 - Still undecided: soul flee speed, capture range, player movement during capture, exact upgrade amounts and attack types, puzzle designs, resource quantities, and controls.
 
 These confirmed choices override earlier prototype suggestions; remaining unconfirmed details are proposals. This update changes documentation only.
+
+## Horror exploration milestone
+Implemented in the procedural prototype: district palettes/props, varied halls and key rooms, cramped passages, journal and quest inventory, three multi-location objective chains, window silhouettes/taps, shrouded hanging bodies, limited flashlight and sound investigation. Next verification gate: complete all journeys in live Unity, check navigation and controller input, then tune horror pacing and replace procedural placeholder art/audio with authored assets. See HORROR_PLAYTEST.md.
